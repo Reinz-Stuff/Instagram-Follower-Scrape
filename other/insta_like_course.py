@@ -54,6 +54,26 @@ class InstaLikers:
         # self.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS)
 
         # Scroll till Followers list is there
+        # popup = self.driver.find_element(By.CSS_SELECTOR, "div > div._ab8w._ab94._ab99._ab9f._ab9m._ab9o._ab9s._abcm")
+        #
+        # for run in range(100):
+        #     print(f"scrolling down {run}")
+        #     self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight', popup)
+        #     time.sleep(2)
+
+        try:
+            popup = self.driver.find_element(By.CSS_SELECTOR, 'div > div > div.x7r02ix.xf1ldfh.x131esax.xdajt7p.xxfnqb6.xb88tzc.xw2csxc.x1odjw0f.x5fp0pe')
+        except:
+            print('FAILED TO FIND POPUP ELEMENT')
+        else:
+
+            print('Popup element is found')
+
+        for run in range(100):
+            print(f"scrolling down {run}")
+            self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight'
+                                       , popup)
+            time.sleep(2)
 
 
 
