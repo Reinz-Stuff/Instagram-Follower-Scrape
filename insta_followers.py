@@ -68,7 +68,7 @@ class InstaFollower:
 
             print('Popup element is found')
 
-        for run in range(10):
+        for run in range(100):
             print(f"scrolling down {run}")
             self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight'
                                        , popup)
