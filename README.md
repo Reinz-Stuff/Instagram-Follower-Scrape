@@ -2,7 +2,12 @@
 This package will display Instagram followers as json, csv and excel files
 
 ## HOW IT WORK?
-This package will scrape followers from the given Instagram URL using Selenium. Then use pandas to produce output in the form of JSON, csv and excel files
+This package will scrape the followers of an Instagram account using Selenium and save the results in multiple formats using pandas. Here is what the package will do:
+
+Use Selenium to scrape followers data from the given Instagram URL.
+Use pandas to create a DataFrame with the scraped data.
+Save the DataFrame as JSON, CSV, and Excel files.
+The output files will be saved in the current working directory.
 
 ## HOW TO USE
 To use the insta_follower.py script, follow these steps:
