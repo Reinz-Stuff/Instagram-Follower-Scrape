@@ -1,4 +1,4 @@
-# Instagram-Like-Scraping
+# Instagram-Follower-Scrape
 This package will display Instagram followers as json, csv and excel files
 
 ## HOW IT WORK?
