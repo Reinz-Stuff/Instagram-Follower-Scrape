@@ -8,15 +8,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # ------------ CONSTANTS ------------- #
 
-INS_EMAIL = 'fauzik303@gmail.com'
-INS_PASSWORD = 'a4867787'
-INS_URL = 'https://www.instagram.com'
+
 # SEARCH_URL = 'https://www.instagram.com/geeks_for_geeks/'
 
-# print("login")
-# INS_EMAIL = input("email: ")
-# INS_PASSWORD = input("password: ")
-# INS_URL = 'https://www.instagram.com'
+print("login")
+INS_EMAIL = input("email: ")
+INS_PASSWORD = input("password: ")
+INS_URL = 'https://www.instagram.com'
 SEARCH_URL = input("instagram url: ")  # 'https://www.instagram.com/geeks_for_geeks/'
 
 
@@ -79,7 +77,10 @@ class InstaFollower:
         data = []
         for pop in follows:
             follow = pop.find_element(By.CSS_SELECTOR, 'div[class=" _ab8y  _ab94 _ab97 _ab9f _ab9k _ab9p _abcm"]').text
-            urls = pop.find_element(By.CSS_SELECTOR, 'a[class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz notranslate _a6hd"]').get_dom_attribute('href')
+            urls = pop.find_element(By.CSS_SELECTOR, 'a[class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619'
+                                                     ' x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r'
+                                                     ' xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq'
+                                                     ' x1a2a7pz notranslate _a6hd"]').get_dom_attribute('href')
             data_dict = {
                 "follower": follow,
                 "Ig link": INS_URL + urls
